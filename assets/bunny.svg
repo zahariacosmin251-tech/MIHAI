@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bFur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8FD0"/>
+      <stop offset="1" stop-color="#FF4FA3"/>
+    </linearGradient>
+  </defs>
+  <!-- ears -->
+  <g stroke="#FFFFFF" stroke-width="5" paint-order="stroke">
+    <ellipse cx="42" cy="34" rx="12" ry="30" fill="url(#bFur)" transform="rotate(-14 42 34)"/>
+    <ellipse cx="78" cy="34" rx="12" ry="30" fill="url(#bFur)" transform="rotate(14 78 34)"/>
+    <ellipse cx="43.5" cy="36" rx="5.5" ry="21" fill="#FFD3E8" transform="rotate(-14 43.5 36)"/>
+    <ellipse cx="76.5" cy="36" rx="5.5" ry="21" fill="#FFD3E8" transform="rotate(14 76.5 36)"/>
+  </g>
+  <!-- head -->
+  <circle cx="60" cy="80" r="30" fill="url(#bFur)" stroke="#FFFFFF" stroke-width="5" paint-order="stroke"/>
+  <!-- bow on right ear -->
+  <g fill="#E11D78" stroke="#FFFFFF" stroke-width="3" paint-order="stroke" stroke-linejoin="round">
+    <path d="M84,52 L74,58 L84,63 Z"/>
+    <path d="M84,52 L94,58 L84,63 Z"/>
+    <circle cx="84" cy="57.5" r="3.4"/>
+  </g>
+  <!-- face -->
+  <circle cx="49" cy="78" r="3.2" fill="#2B0A1E"/>
+  <circle cx="71" cy="78" r="3.2" fill="#2B0A1E"/>
+  <circle cx="50.2" cy="76.8" r="1.1" fill="#FFF"/>
+  <circle cx="72.2" cy="76.8" r="1.1" fill="#FFF"/>
+  <path d="M60,85 C58.4,83 55.6,83.5 55.6,86 C55.6,88.4 60,91 60,91 C60,91 64.4,88.4 64.4,86 C64.4,83.5 61.6,83 60,85 Z" fill="#E11D78"/>
+  <ellipse cx="43" cy="87" rx="5" ry="3" fill="#FF9BC8" opacity="0.7"/>
+  <ellipse cx="77" cy="87" rx="5" ry="3" fill="#FF9BC8" opacity="0.7"/>
+</svg>

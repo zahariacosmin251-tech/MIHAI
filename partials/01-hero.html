@@ -1,0 +1,145 @@
+<!-- ============================================================
+     01 — HERO + BANDĂ MARQUEE + BENEFICII RAPIDE  (01-hero.html)
+     ============================================================ -->
+
+<!-- ============ HERO ============ -->
+<section id="acasa" class="relative min-h-screen flex items-center pt-32 pb-20 md:pt-36 overflow-hidden">
+
+  <!-- Fundal: gradient alb → blush + blobs roz decorative -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-white to-candy-100/70" aria-hidden="true"></div>
+  <div class="mc-blob absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-candy-200" data-parallax="0.12" aria-hidden="true"></div>
+  <div class="mc-blob absolute top-1/4 -right-32 w-[24rem] h-[24rem] rounded-full bg-candy-300" data-parallax="-0.1" aria-hidden="true"></div>
+  <div class="mc-blob absolute -bottom-40 left-1/4 w-[22rem] h-[22rem] rounded-full bg-candy-200" data-parallax="0.08" aria-hidden="true"></div>
+
+  <!-- Iepuraș decorativ în colțul stâng -->
+  <img src="assets/bunny.svg" alt="Iepuraș roz decorativ" class="absolute bottom-8 left-4 md:left-8 w-16 md:w-20 opacity-20 mc-float pointer-events-none" data-parallax="0.15" aria-hidden="true">
+
+  <!-- Inimioare plutitoare (canvas) -->
+  <canvas id="heartsCanvas" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
+
+  <div class="relative w-full mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-14 lg:gap-12 items-center">
+
+    <!-- ===== STÂNGA: text + acțiuni ===== -->
+    <div>
+      <p class="kicker" data-hero="0">Acum recrutăm · Olanda</p>
+
+      <h1 class="mt-5 font-display text-5xl md:text-7xl font-bold leading-[1.08]" data-hero="0.1">
+        Lucrează <span class="mc-gradient-text italic">legal</span> în
+        vitrinele din <span class="text-candy-600">Olanda</span>
+        <span class="block mt-4 font-script font-normal text-candy-600 text-4xl md:text-5xl leading-snug">pe termenii tăi, cu contract</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg text-plum/70 leading-relaxed" data-hero="0.2">
+        Recrutăm tinere pentru dansuri erotice și sexwork legal în vitrine și cluburi
+        licențiate din Olanda — unde profesia este reglementată de lege. Lucrezi cu
+        <strong>contract de muncă</strong>, în mediu securizat, cu <strong>drept de refuz</strong>
+        și suport complet de la echipa noastră. Aplici doar dacă ai 18 ani împliniți.
+      </p>
+
+      <!-- Mini-chip-uri de încredere -->
+      <ul class="mt-7 flex flex-wrap gap-3" data-hero="0.3">
+        <li class="inline-flex items-center gap-2 rounded-full border border-candy-200 bg-white/80 px-4 py-2 text-sm text-plum shadow-soft backdrop-blur">
+          <i class="fa-solid fa-file-signature text-candy-600" aria-hidden="true"></i> Contract de muncă
+        </li>
+        <li class="inline-flex items-center gap-2 rounded-full border border-candy-200 bg-white/80 px-4 py-2 text-sm text-plum shadow-soft backdrop-blur">
+          <i class="fa-solid fa-house-chimney text-candy-600" aria-hidden="true"></i> Cazare asigurată
+        </li>
+        <li class="inline-flex items-center gap-2 rounded-full border border-candy-200 bg-white/80 px-4 py-2 text-sm text-plum shadow-soft backdrop-blur">
+          <i class="fa-solid fa-hand-holding-heart text-candy-600" aria-hidden="true"></i> Zero taxe de recrutare
+        </li>
+        <li class="inline-flex items-center gap-2 rounded-full border border-candy-200 bg-white/80 px-4 py-2 text-sm text-plum shadow-soft backdrop-blur">
+          <i class="fa-solid fa-shield-heart text-candy-600" aria-hidden="true"></i> Drept de refuz, mereu
+        </li>
+      </ul>
+
+      <!-- Butoane -->
+      <div class="mt-9 flex flex-wrap items-center gap-4" data-hero="0.4">
+        <a href="#aplica" class="btn-primary">Vreau să vin <span class="ml-1" aria-hidden="true">♥</span></a>
+        <a href="#pozitii" class="btn-ghost">Vezi pozițiile</a>
+      </div>
+
+      <!-- Notă 18+ -->
+      <p class="mt-6 flex flex-wrap items-center gap-2 text-sm text-plum/50" data-hero="0.5">
+        <span class="chip-18">18+</span> Sexwork legal, reglementat în Olanda · doar 18+
+      </p>
+    </div>
+
+    <!-- ===== DREAPTA: cadru foto mare ===== -->
+    <div class="relative flex flex-col items-center">
+      <!-- Iepuraș jucăuș deasupra cadrului -->
+      <img src="assets/bunny.svg" alt="Iepuraș roz cu fundiță, decor jucăuș" class="absolute -top-10 right-2 md:-right-2 w-14 md:w-16 opacity-20 rotate-12 pointer-events-none" aria-hidden="true">
+
+      <div class="relative" data-hero="0.25">
+        <div class="relative overflow-hidden rounded-[2.5rem] border-8 border-white bg-white shadow-glow">
+          <img src="assets/img/hero.jpg" alt="Vitrină elegantă cu lumini roz, în cartierul vitrinelor din Olanda"
+               loading="eager" width="1344" height="768"
+               class="h-[26rem] md:h-[32rem] w-full object-cover">
+        </div>
+        <span class="badge-heart -top-4 -right-4 mc-beat" aria-hidden="true">
+          <i class="fa-solid fa-heart"></i>
+        </span>
+      </div>
+
+      <!-- Etichetă glass sub cadru -->
+      <div class="mt-6 inline-flex items-center gap-2 rounded-full bg-white/70 px-5 py-2.5 text-sm text-plum shadow-soft backdrop-blur" data-hero="0.4">
+        <i class="fa-solid fa-heart text-candy-600" aria-hidden="true"></i>
+Vitrine licențiate · lumini roz, orașe olandeze
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ BANDĂ MARQUEE ============ -->
+<div class="relative" aria-hidden="true">
+  <div class="mc-marquee -rotate-1 w-[104%] -ml-[2%] bg-gradient-to-r from-candy-600 to-candy-700 py-4 text-white shadow-candy">
+    <div class="mc-marquee-track font-semibold uppercase tracking-[0.2em] text-sm md:text-base">
+      <span>ACUM RECRUTĂM&nbsp;♥&nbsp;VITRINE&nbsp;♥&nbsp;DANSURI EROTICE&nbsp;♥&nbsp;SEXWORK LEGAL&nbsp;♥&nbsp;CONTRACT DE MUNCĂ&nbsp;♥&nbsp;OLANDA&nbsp;♥&nbsp;18+&nbsp;♥&nbsp;</span>
+      <span>ACUM RECRUTĂM&nbsp;♥&nbsp;VITRINE&nbsp;♥&nbsp;DANSURI EROTICE&nbsp;♥&nbsp;SEXWORK LEGAL&nbsp;♥&nbsp;CONTRACT DE MUNCĂ&nbsp;♥&nbsp;OLANDA&nbsp;♥&nbsp;18+&nbsp;♥&nbsp;</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BANDĂ BENEFICII RAPIDE ============ -->
+<section class="relative py-16 overflow-hidden">
+  <div class="mc-blob absolute -top-24 right-0 w-[20rem] h-[20rem] rounded-full bg-candy-200" data-parallax="0.1" aria-hidden="true"></div>
+  <div class="mc-blob absolute -bottom-28 -left-20 w-[18rem] h-[18rem] rounded-full bg-candy-300" data-parallax="-0.08" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+      <div class="card-soft p-7 text-center" data-reveal="up">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-candy-400 to-candy-600 text-xl text-white shadow-candy">
+          <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-bold">Contract de muncă real</h3>
+        <p class="mt-2 text-sm leading-relaxed text-plum/70">Semnezi înainte de plecare: program, drepturi, plată conform legii olandeze — totul pe hârtie.</p>
+      </div>
+
+      <div class="card-soft p-7 text-center" data-reveal="up" data-delay="0.08">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-candy-400 to-candy-600 text-xl text-white shadow-candy">
+          <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-bold">Cazare asigurată</h3>
+        <p class="mt-2 text-sm leading-relaxed text-plum/70">Te așteaptă o locuință confortabilă, pregătită de clubul licențiat încă din prima zi.</p>
+      </div>
+
+      <div class="card-soft p-7 text-center" data-reveal="up" data-delay="0.16">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-candy-400 to-candy-600 text-xl text-white shadow-candy">
+          <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-bold">Deplasare plătită</h3>
+        <p class="mt-2 text-sm leading-relaxed text-plum/70">Călătoria spre Olanda este acoperită de clubul licențiat — tu ai doar bagajul de împachetat.</p>
+      </div>
+
+      <div class="card-soft p-7 text-center" data-reveal="up" data-delay="0.24">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-candy-400 to-candy-600 text-xl text-white shadow-candy">
+          <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-bold">Zero taxe de recrutare</h3>
+        <p class="mt-2 text-sm leading-relaxed text-plum/70">Nu plătești nimic pentru aplicare sau plasare — niciodată, sub nicio formă.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

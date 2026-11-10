@@ -1,0 +1,227 @@
+/* ============================================================
+   Vitrine Olanda — style.css
+   Temă: alb & roz bombon, strălucitor, elegant (18+, stil glam)
+   ============================================================ */
+
+:root {
+  --candy-600: #FF4FA3;
+  --candy-700: #E11D78;
+  --candy-200: #FFD3E8;
+  --blush: #FFF5F8;
+  --plum: #2B0A1E;
+  --gold: #FFD86B;
+}
+
+html { scroll-behavior: auto; } /* Lenis controlează scrollul */
+
+body { min-height: 100vh; }
+
+::selection { background: var(--candy-600); color: #fff; }
+
+/* scrollbar roz */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--blush); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--candy-600), var(--candy-700));
+  border-radius: 999px; border: 2px solid var(--blush);
+}
+
+/* ---------------- Butoane ---------------- */
+.btn-primary, .btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font-weight: 600; letter-spacing: .01em;
+  padding: .85rem 1.75rem; border-radius: 999px;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease, background .35s ease, color .35s ease;
+  will-change: transform; cursor: pointer; text-decoration: none;
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #FF7AC8 0%, #FF4FA3 45%, #E11D78 100%);
+  box-shadow: 0 14px 34px -10px rgba(225,29,120,.55), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 20px 44px -10px rgba(225,29,120,.65), 0 0 30px rgba(255,79,163,.45);
+}
+.btn-primary:active { transform: translateY(-1px) scale(.99); }
+
+.btn-ghost {
+  color: var(--candy-700); background: #fff;
+  border: 2px solid var(--candy-200);
+  box-shadow: 0 8px 24px -12px rgba(225,29,120,.25);
+}
+.btn-ghost:hover, .btn-ghost:focus-visible {
+  transform: translateY(-3px); border-color: var(--candy-600);
+  box-shadow: 0 14px 30px -12px rgba(225,29,120,.35);
+}
+
+/* ---------------- Chip 18+ ---------------- */
+.chip-18 {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .68rem; font-weight: 700; letter-spacing: .08em;
+  color: #fff; padding: .28rem .6rem; border-radius: .6rem;
+  background: linear-gradient(135deg, #E11D78, #7A0A3D);
+  box-shadow: 0 4px 14px -4px rgba(122,10,61,.6);
+  user-select: none;
+}
+
+/* ---------------- Tipografie ---------------- */
+.kicker {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .74rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--candy-700);
+}
+.kicker::before {
+  content: ""; width: 2rem; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--candy-600));
+}
+.kicker::after {
+  content: ""; width: 2rem; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--candy-600), transparent);
+}
+
+.title-flourish { position: relative; }
+.title-flourish::after {
+  content: "♥";
+  display: block; margin-top: .45rem;
+  font-size: .8rem; color: var(--candy-500);
+  text-shadow: 0 0 12px rgba(255,79,163,.8);
+}
+
+.mc-gradient-text {
+  background: linear-gradient(120deg, #FF7AC8 0%, #FF4FA3 40%, #E11D78 75%, #FFD86B 110%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.mc-shine { position: relative; overflow: hidden; }
+.mc-shine::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.55) 50%, transparent 60%);
+  transform: translateX(-120%); animation: mc-shine 4.5s ease-in-out infinite;
+}
+@keyframes mc-shine { 0%, 55% { transform: translateX(-120%); } 85%, 100% { transform: translateX(120%); } }
+
+/* ---------------- Carduri ---------------- */
+.card-soft {
+  background: #fff; border: 1px solid var(--candy-200);
+  border-radius: 1.75rem; box-shadow: 0 10px 40px -14px rgba(225,29,120,.16);
+  transition: transform .5s cubic-bezier(.34,1.56,.64,1), box-shadow .5s ease, border-color .5s ease;
+  will-change: transform;
+}
+.card-soft:hover {
+  transform: translateY(-10px);
+  border-color: var(--candy-500);
+  box-shadow: 0 26px 60px -18px rgba(225,29,120,.35), 0 0 26px rgba(255,79,163,.18);
+}
+
+.tilt-img { transition: transform .7s cubic-bezier(.22,1,.36,1), filter .7s ease; will-change: transform; }
+.group:hover .tilt-img, .group:hover img.tilt-img { transform: scale(1.07) rotate(.6deg); filter: saturate(1.15); }
+
+/* inimioară badge pe carduri de poză */
+.badge-heart {
+  position: absolute; z-index: 10;
+  width: 2.6rem; height: 2.6rem; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem;
+  background: linear-gradient(135deg, #FF7AC8, #E11D78);
+  box-shadow: 0 10px 24px -8px rgba(225,29,120,.7);
+}
+
+/* ---------------- Link navbar ---------------- */
+.nav-link { position: relative; color: var(--plum); text-decoration: none; padding: .25rem 0; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 100%;
+  border-radius: 2px; background: linear-gradient(90deg, #FF7AC8, #E11D78);
+  transform: scaleX(0); transform-origin: right; transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+.nav-link:hover { color: var(--candy-700); }
+
+/* ---------------- Animații decorative ---------------- */
+.mc-float { animation: mc-float 5.5s ease-in-out infinite; }
+@keyframes mc-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+.mc-beat { animation: mc-beat 1.6s ease-in-out infinite; transform-origin: center; }
+@keyframes mc-beat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.09); } 28% { transform: scale(1); }
+  42% { transform: scale(1.07); } 56% { transform: scale(1); }
+}
+
+.mc-pulse-ring { position: relative; }
+.mc-pulse-ring::before {
+  content: ""; position: absolute; inset: -6px; border-radius: inherit;
+  border: 2px solid rgba(255,79,163,.55);
+  animation: mc-pulse 2.4s ease-out infinite; pointer-events: none;
+}
+@keyframes mc-pulse {
+  0% { transform: scale(.92); opacity: .9; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+/* marquee bandă */
+.mc-marquee { overflow: hidden; }
+.mc-marquee-track {
+  display: inline-flex; gap: 3rem; white-space: nowrap; will-change: transform;
+  animation: mc-marquee 26s linear infinite;
+}
+@keyframes mc-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* blob decorativ */
+.mc-blob { filter: blur(60px); opacity: .55; pointer-events: none; }
+
+/* inimioarele plutitoare (canvas) */
+#heartsCanvas { pointer-events: none; }
+
+/* ---------------- Swiper ajustări ---------------- */
+.gallery-swiper .swiper-slide { height: auto; }
+.gallery-swiper .swiper-pagination-bullet { background: var(--candy-600); opacity: .35; }
+.gallery-swiper .swiper-pagination-bullet-active { opacity: 1; box-shadow: 0 0 10px rgba(255,79,163,.8); }
+.gallery-swiper .swiper-button-next, .gallery-swiper .swiper-button-prev { color: var(--candy-700); }
+.swiper-pagination-bullet { background: var(--candy-600); opacity: .35; }
+.swiper-pagination-bullet-active { opacity: 1; }
+
+/* acordeon FAQ */
+.acc-body { max-height: 0; overflow: hidden; transition: max-height .55s cubic-bezier(.22,1,.36,1); }
+.acc-item.open .acc-body { max-height: 26rem; }
+.acc-item.open .acc-icon { transform: rotate(45deg); color: #fff; background: var(--candy-600); border-color: var(--candy-600); }
+.acc-icon { transition: transform .4s ease, background .4s ease, color .4s ease, border-color .4s ease; }
+
+/* formular */
+.mc-field {
+  width: 100%; border-radius: 1rem; border: 1.5px solid var(--candy-200);
+  background: #fff; padding: .85rem 1.1rem; font-size: .95rem; color: var(--plum);
+  transition: border-color .3s ease, box-shadow .3s ease; outline: none;
+}
+.mc-field:focus { border-color: var(--candy-600); box-shadow: 0 0 0 4px rgba(255,79,163,.15); }
+.mc-field::placeholder { color: rgba(43,10,30,.35); }
+
+/* toast */
+#mcToast {
+  position: fixed; left: 50%; bottom: 2rem; transform: translate(-50%, 8rem);
+  z-index: 90; opacity: 0; transition: transform .5s cubic-bezier(.34,1.56,.64,1), opacity .5s ease;
+  pointer-events: none;
+}
+#mcToast.show { transform: translate(-50%, 0); opacity: 1; }
+
+/* inimioare erupte la click pe CTA */
+.mc-heart-pop {
+  position: fixed; z-index: 95; pointer-events: none; font-size: 1rem; color: var(--candy-600);
+  animation: mc-heart-pop 1s ease-out forwards; text-shadow: 0 0 10px rgba(255,79,163,.7);
+}
+@keyframes mc-heart-pop {
+  0% { transform: translate(-50%, -50%) scale(.4); opacity: 1; }
+  100% { transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% - 90px)) scale(1.25); opacity: 0; }
+}
+
+/* navbar mic la scroll */
+#navbar.scrolled nav { height: 3.9rem; background: rgba(255,255,255,.95); }
+
+/* Age gate: tranzitie de iesire */
+#ageGate.gate-out { opacity: 0; transform: scale(1.04); transition: opacity .6s ease, transform .6s ease; pointer-events: none; }
+
+/* accesibilitate: miscare redusa */
+@media (prefers-reduced-motion: reduce) {
+  .mc-float, .mc-beat, .mc-shine::after, .mc-marquee-track, .mc-pulse-ring::before { animation: none !important; }
+  * { transition-duration: .01ms !important; }
+}

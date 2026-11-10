@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="gHeart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8FD0"/>
+      <stop offset="0.45" stop-color="#FF4FA3"/>
+      <stop offset="1" stop-color="#E11D78"/>
+    </linearGradient>
+    <linearGradient id="gHorn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF4FA3"/>
+      <stop offset="1" stop-color="#A80E52"/>
+    </linearGradient>
+    <linearGradient id="gArrow" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC2E0"/>
+      <stop offset="1" stop-color="#FF5FB0"/>
+    </linearGradient>
+    <linearGradient id="gTail" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#E11D78"/>
+      <stop offset="1" stop-color="#FF4FA3"/>
+    </linearGradient>
+    <filter id="mcBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <!-- glow -->
+  <circle cx="60" cy="60" r="44" fill="#FF4FA3" opacity="0.28" filter="url(#mcBlur)"/>
+
+  <!-- sparkles -->
+  <g fill="#FFD86B">
+    <path d="M16,34 L18.6,40 L24.5,42.6 L18.6,45.2 L16,51 L13.4,45.2 L7.5,42.6 L13.4,40 Z"/>
+    <path d="M100,44 L101.8,48.2 L106,50 L101.8,51.8 L100,56 L98.2,51.8 L94,50 L98.2,48.2 Z" fill="#FFF"/>
+    <path d="M70,8 L71.6,11.8 L75.4,13.4 L71.6,15 L70,18.8 L68.4,15 L64.6,13.4 L68.4,11.8 Z"/>
+  </g>
+
+  <!-- horns (sub heart) -->
+  <path d="M36,24 Q30,8 25,3 Q39,5 48,12 Q42,18 36,24 Z" fill="url(#gHorn)" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke"/>
+  <path d="M84,24 Q90,8 95,3 Q81,5 72,12 Q78,18 84,24 Z" fill="url(#gHorn)" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke"/>
+
+  <!-- tail -->
+  <path d="M94,84 C114,88 121,70 112,57 C107.5,50.5 100.5,50.5 98,55" fill="none" stroke="url(#gTail)" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M104,44 Q95,53 100.5,60 Q103.5,63.5 106.5,60 Q112,53 104,44 Z" fill="#E11D78" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" paint-order="stroke"/>
+
+  <!-- heart (sticker outline) -->
+  <path d="M60,101 C60,101 17,72.5 17,42 C17,25.5 29.5,15.5 43,15.5 C51,15.5 57,19.8 60,26.5 C63,19.8 69,15.5 77,15.5 C90.5,15.5 103,25.5 103,42 C103,72.5 60,101 60,101 Z"
+        fill="url(#gHeart)" stroke="#FFFFFF" stroke-width="6.5" stroke-linejoin="round" paint-order="stroke"/>
+
+  <!-- gloss -->
+  <path d="M31,34 C35,26 44,21 52,22.5 C48,28 44,35 43,44 C40,39 34.5,37.5 31,34 Z" fill="#FFFFFF" opacity="0.55"/>
+  <circle cx="37" cy="47" r="2.6" fill="#FFFFFF" opacity="0.75"/>
+
+  <!-- arrow piercing the heart -->
+  <g stroke-linecap="round">
+    <line x1="97" y1="20" x2="34" y2="78" stroke="url(#gArrow)" stroke-width="5"/>
+    <path d="M36,79 L20,82.5 L27.5,68.5 Z" fill="#FF5FB0" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"/>
+    <path d="M95,22 L105,11.5 L109.5,16 L99.5,26.5 Z" fill="#FF9BC8" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"/>
+    <path d="M99,27 L109,18.5 L111.5,23.5 L103,31.5 Z" fill="#FFC2E0" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"/>
+  </g>
+</svg>

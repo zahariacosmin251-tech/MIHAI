@@ -1,0 +1,86 @@
+<!-- ============================================================
+     09 · CTA — „Vreau să vin” formular de aplicare
+     ============================================================ -->
+<section id="aplica" class="relative overflow-hidden py-24 md:py-32">
+  <!-- decor -->
+  <div class="mc-blob absolute -top-24 -left-24 h-[26rem] w-[26rem] rounded-full bg-candy-200" data-parallax="0.12" aria-hidden="true"></div>
+  <div class="mc-blob absolute -bottom-28 -right-20 h-[24rem] w-[24rem] rounded-full bg-candy-300" data-parallax="-0.1" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4">
+    <div class="text-center">
+      <p class="kicker" data-reveal="up">Aplică acum</p>
+      <h2 class="title-flourish mt-3 font-display text-4xl font-bold md:text-5xl" data-reveal="up" data-delay="0.08">
+        Gata de <span class="mc-gradient-text italic">start</span>? Aplică azi ♥
+      </h2>
+    </div>
+
+    <!-- card mare gradient -->
+    <div class="mc-shine relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-candy-500 via-candy-600 to-candy-700 p-8 text-white shadow-glow md:p-12" data-reveal="zoom">
+      <!-- decor alb translucid -->
+      <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-white/10" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -bottom-28 -left-16 h-80 w-80 rounded-full bg-white/10" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-16 top-12 hidden h-24 w-24 rounded-full border border-white/25 md:block" aria-hidden="true"></div>
+
+      <div class="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <!-- stânga: mesaj + pași -->
+        <div>
+          <h3 class="font-display text-3xl font-bold leading-tight md:text-4xl">Vreau să vin în Olanda!</h3>
+          <p class="mt-4 leading-relaxed text-white/85">
+            Spune-ne câteva vorbe despre tine și îți pregătim o ofertă clară, în scris, cu
+            contract de muncă. Discret, fără taxe și fără presiune — cu tot sprijinul nostru,
+            de la primul mesaj până la prima ta zi de muncă.
+          </p>
+
+          <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-gold">Ce se întâmplă după</p>
+          <ul class="mt-4 space-y-3.5 text-sm leading-relaxed text-white/90">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 text-[0.7rem]" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span>Te contactăm discret, pe canalul preferat de tine.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 text-[0.7rem]" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span>Discutăm detaliile: rolul, serviciile, programul și tot ce te interesează.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/20 text-[0.7rem]" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span>Iei decizia în liniște — nimic nu se face fără acordul tău.</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex items-end gap-4">
+            <p class="font-script text-3xl text-white/90">cu drag, echipa ta</p>
+            <img src="assets/bunny.svg" alt="Iepuraș roz, mascotă decorativă" loading="lazy" class="mc-float w-14 shrink-0 opacity-30" aria-hidden="true">
+          </div>
+        </div>
+
+        <!-- dreapta: formular -->
+        <form id="applyForm" class="grid gap-4 rounded-3xl bg-white p-6 text-plum shadow-candy md:p-8" novalidate>
+          <input id="fNume" class="mc-field" type="text" placeholder="Numele tău" required aria-label="Numele tău">
+          <input id="fVarsta" class="mc-field" type="number" min="18" max="99" placeholder="Vârsta (18+)" required aria-label="Vârsta, minim 18 ani">
+          <input id="fOras" class="mc-field" type="text" placeholder="Orașul tău" aria-label="Orașul tău">
+          <select id="fPozitie" class="mc-field cursor-pointer" aria-label="Poziția dorită">
+            <option>Vitrină · sexwork legal</option>
+            <option>Dansatoare erotică</option>
+            <option>Striptease / Show-uri private</option>
+            <option>Barmaniță sau Barman</option>
+            <option>Personal de sprijin</option>
+          </select>
+          <input id="fContact" class="mc-field" type="text" placeholder="Telefon / WhatsApp / Telegram" required aria-label="Telefon, WhatsApp sau Telegram">
+          <textarea id="fMesaj" class="mc-field" rows="3" placeholder="Mesaj (opțional) — spune-ne câteva vorbe despre tine" aria-label="Mesaj opțional"></textarea>
+
+          <label class="flex items-start gap-3 text-sm text-plum/70">
+            <input id="f18" type="checkbox" class="mt-1 h-4 w-4 accent-candy-600">
+            <span>Confirmă că am 18 ani împliniți și am citit secțiunea <a href="#legal" class="text-candy-700 underline">Legale</a>.</span>
+          </label>
+
+          <button type="submit" class="btn-primary w-full">Trimite aplicația <i class="fa-solid fa-paper-plane ml-1" aria-hidden="true"></i></button>
+
+          <p class="text-[11px] leading-relaxed text-plum/45">
+            Confidențial: datele tale sunt folosite exclusiv pentru recrutare și nu sunt partajate cu terți.
+            <!-- CHANGE-ME: configurează numărul WhatsApp/email în js/main.js (CONFIG) -->
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
