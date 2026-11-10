@@ -83,17 +83,35 @@
   window.addEventListener("scroll", onScrollNav, { passive: true });
   onScrollNav();
 
-  function closeMobileMenu() {
-    if (!mobileMenu || mobileMenu.classList.contains("hidden")) return;
-    mobileMenu.classList.add("hidden");
-    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  function closeMobileMenu() { setMobileMenu(false); }
+
+  var navToggleIcon = navToggle ? navToggle.querySelector("i") : null;
+  var menuScrim = document.getElementById("mobileMenuScrim");
+
+  function setMobileMenu(open) {
+    if (!mobileMenu) return;
+    mobileMenu.classList.toggle("hidden", !open);
+    if (menuScrim) menuScrim.classList.toggle("hidden", !open);
+    if (navToggle) navToggle.setAttribute("aria-expanded", String(open));
+    if (navToggleIcon) navToggleIcon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    document.documentElement.classList.toggle("mc-no-scroll", open);
+    if (open) {
+      mobileMenu.classList.remove("mc-menu-in");
+      void mobileMenu.offsetWidth;
+      mobileMenu.classList.add("mc-menu-in");
+    }
+    if (lenis) { open ? lenis.stop() : lenis.start(); }
   }
+
   if (navToggle && mobileMenu) {
     navToggle.addEventListener("click", function () {
-      var hidden = mobileMenu.classList.toggle("hidden");
-      navToggle.setAttribute("aria-expanded", String(!hidden));
+      setMobileMenu(mobileMenu.classList.contains("hidden"));
     });
   }
+  if (menuScrim) menuScrim.addEventListener("click", closeMobileMenu);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMobileMenu();
+  });
 
   /* secțiune activă în navbar */
   if (hasST) {

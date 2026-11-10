@@ -137,6 +137,21 @@ body { min-height: 100vh; }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
 .nav-link:hover { color: var(--candy-700); }
 
+/* ---------------- Meniu mobil ---------------- */
+.mc-no-scroll { overflow: hidden; }
+html { overflow-x: clip; }
+.mc-menu-in { animation: mcMenuIn .34s cubic-bezier(.22,1,.36,1) both; }
+@keyframes mcMenuIn {
+  from { opacity: 0; transform: translateY(-12px) scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .mc-menu-in { animation: none; } }
+
+#mobileMenu .nav-link { border-radius: .75rem; padding-inline: .5rem; margin-inline: -.5rem; }
+#mobileMenu .nav-link::after { display: none; }
+#mobileMenu .nav-link.active { color: var(--candy-700); background: rgba(255,122,200,.10); }
+#mobileMenu .nav-link.active i { color: var(--candy-600) !important; }
+
 /* ---------------- Animații decorative ---------------- */
 .mc-float { animation: mc-float 5.5s ease-in-out infinite; }
 @keyframes mc-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
