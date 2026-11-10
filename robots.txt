@@ -1,0 +1,7 @@
+# Recrutare Vitrine Olanda — 18+ only
+User-agent: *
+Allow: /
+Disallow: /index.shell.html
+Disallow: /partials/
+
+Sitemap: https://zahariacosmin251-tech.github.io/MIHAI/sitemap.xml
